@@ -62,7 +62,7 @@ class Bird:
         make the bird jump
         :return: None
         """
-        self.vel = -10.5
+        self.vel = -10.5 #was -10.5
         self.tick_count = 0
         self.height = self.y
 
@@ -74,7 +74,8 @@ class Bird:
         self.tick_count += 1
 
         # for downward acceleration
-        displacement = self.vel*(self.tick_count) + 0.5*(3)*(self.tick_count)**2  # calculate displacement
+        displacement = self.vel*(self.tick_count) + 0.5*(3)*(self.tick_count)**2  # calculate displacement 
+        #added 3 at the end, remove later
 
         # terminal velocity
         if displacement >= 16:
@@ -134,8 +135,8 @@ class Pipe():
     """
     represents a pipe object
     """
-    GAP = 200
-    VEL = 5
+    GAP = 175 #was 200
+    VEL = 8 #was 5
 
     def __init__(self, x):
         """
